@@ -6,7 +6,7 @@ email: editore@ssml.va.it
 
 heading: Introduzione
 description: "<p>Kotoba è la collana della <a href='http://www.ssml.va.it'>Scuola Superiore di Mediazione Linguistica di Varese</a>, dedicata agli studi di comunicazione interlinguale e interculturale. La collana comprenderà sia delle monografie di autori singoli che delle raccolte di saggi, curate da diversi studiosi, che si occupano della stessa tematica. Il titolo della collana s'ispira al sostantivo giapponese ことば che significa &laquo;parola&raquo; ed esprime la sua apertura scientifico-culturale a contributi scritti in diverse lingue, oltre all'italiano soprattutto in inglese, francese, spagnolo e tedesco, nonché in giapponese e cinese, ossia nelle lingue studiate presso la SSML di Varese. Tutte le proposte per la pubblicazione di un volume saranno sottoposte al comitato scientifico della collana.</p>"
-baseurl: "/kotoba"
+baseurl: ""
 url: "http://kotoba.ssml.va.it"
 username: ssml_avvisi
 
