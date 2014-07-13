@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head profile="http://gmpg.org/xfn/11">
 
-<title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }} | {{ site.subtitle }}{% endif %}</title>
+<title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }} &middot; {{ site.subtitle }}{% endif %}</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <meta name="robots" content="index, nofollow" />
 
@@ -57,7 +57,7 @@
 					<ol>
 					{% for volume in site.data.volumes %}
 					<li>
-						Volume {{ volume.number }}. {{ volume.author }} {% if volume.curated %}(cur.){% endif %} : &laquo;{{ volume.title }}&raquo; (<a href="{{site.s3}}Kotoba-Volume-{{ volume.number }}.pdf">pdf</a>)
+						Volume {{ volume.number }}. {{ volume.author }} {% if volume.curated %}(cur.){% endif %} : &laquo;{{ volume.title }}&raquo; (<a href="{{site.s3}}{{ volume.filename }}">pdf</a>)
 					</li> <br />
 					{% endfor %}
 					</ol>
@@ -69,7 +69,7 @@
 					<ol>
 					{% for book in site.data.books %}
   				<li>
-						Quaderni {{ book.number }}. {{ book.author }} : &laquo;{{ book.title }}&raquo; (<a href="{{site.s3}}Kotoba-Quaderni-{{ book.number }}.pdf">pdf</a>)
+						Quaderni {{ book.number }}. {{ book.author }} : &laquo;{{ book.title }}&raquo; (<a href="{{site.s3}}{{ book.filename }}">pdf</a>)
   				</li> <br />
 					{% endfor %}
 					</ol>
