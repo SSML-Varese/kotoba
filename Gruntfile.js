@@ -4,6 +4,7 @@ module.exports = function(grunt) {
       var source = this.data.source,
           target = this.data.target,
           defaults = this.data.defaults,
+          quotedKeys = this.data.quotedKeys,
           keys = this.data.keys,
           redirectKey = this.data.redirectKey,
           contents = "";
@@ -28,6 +29,12 @@ module.exports = function(grunt) {
           contents = contents.concat(defaults[index], "\n");
         }
 
+        for (var index in quotedKeys) {
+          var quotedKey = quotedKeys[index];
+
+          contents = contents.concat(quotedKey, ': "', yaml[item][quotedKey], '"\n');
+        }
+
         for (var index in keys) {
           var key = keys[index];
 
@@ -50,14 +57,16 @@ module.exports = function(grunt) {
         source: "_data/books.yml",
         target: "quaderni",
         defaults: ["layout: redirect"],
-        keys: ["title", "filename"],
+        quotedKeys: ["title"],
+        keys: ["filename"],
         redirectKey: "number"
       },
       volumes: {
         source: "_data/volumes.yml",
         target: "volume",
         defaults: ["layout: redirect"],
-        keys: ["title", "filename"],
+        quotedKeys: ["title"],
+        keys: ["filename"],
         redirectKey: "number"
       }
     }
