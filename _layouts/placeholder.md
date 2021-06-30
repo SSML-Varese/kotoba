@@ -29,6 +29,8 @@
 .site-description { display:block!important; }
 </style>
 
+<script defer data-domain="kotoba.ssml.va.it" src="https://plausible.io/js/plausible.js"></script>
+
 </head>
 
 <body class="home blog">
